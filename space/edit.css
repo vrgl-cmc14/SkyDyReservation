@@ -1,0 +1,98 @@
+*{
+    font-family: "Chelsea Market", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 2px;
+}
+
+body{
+    margin: 0 auto;
+}
+
+.parent{
+    display: flex;
+    min-height: 100vh;
+}
+
+.child1{
+    flex: 1.5;
+    background-color: #325288;
+    min-height: 100vh;
+}
+
+.child2{
+    flex: 8.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background: url(../assets/skydybg.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding: 80px;
+    
+}
+.headerText{
+    color:#3B71CA;
+}
+.dashboardButton{
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    background: none;
+    color: whitesmoke;
+    border: none;
+}
+
+.ChosendashboardButton{
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    background-color: #F3EA6D;
+    color: black;
+    border: none;
+}
+
+.dashboardButton:hover{
+    background-color: #F3EA6D;
+    color: black;
+}
+.grandchild1{
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.headerChild2{
+    background-color: #3B71CA;
+    text-align: center;
+    color: whitesmoke;
+    border-radius: 40px;
+    width: 100%;
+}
+
+.grandchild4{
+    background-color: #FFF8C4;
+    min-height: 100vh;      
+    color: black;
+    padding: 20px;          
+    box-sizing: border-box; 
+    text-align: left;    
+}
+
+.grandchild5 {
+           
+}
+.grandchild6{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grandchil6 form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+}

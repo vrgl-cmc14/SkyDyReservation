@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="add.css"> 
+        <script src="formspace.js"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Cherry+Bomb+One&display=swap" rel="stylesheet">
+        <script>
+            
+            function openOverview(){
+                window.open("../Admin/index.php", "_self");
+            } 
+            function openSpace(){
+                window.open("../space/spaceoverview.html", "_self");
+            } 
+
+            function openRates(){
+                window.open("../Rates/readdisplayrecords.php", "_self");
+            } 
+
+            function openReservations(){
+                window.open("../Reservations/reservation.html", "_self");
+            } 
+
+            function openPayments(){
+                window.open("../payments/payments.html", "_self");
+            } 
+
+            function openSettings(){
+                window.open("../settings/settings.html", "_self");
+            } 
+            function openRecent(){
+                window.open("displayrecentreservation.php", "_self")
+            }
+            function openFuture(){
+                window.open("displayfuturereservation.php", "_self")
+            }
+        </script>
+    </head>
+
+    <body>
+        <div class="parent">
+            <div class="child1">
+                <div class="grandchild1">
+                    <div class="grandchild2">
+                        <img src="../assets/skydylogo.png" width="100px">
+                    </div>
+                </div>
+                <div class="grandchild3">
+                    <button class="dashboardButton" onclick="openOverview()">OVERVIEW</button>
+                    <button class="ChosendashboardButton" onclick="openSpace()">SPACE</button>
+                    <button class="dashboardButton" onclick="openRates()">RATES</button>
+                    <button class="dashboardButton" onclick="openReservations()">RESERVATION</button>
+                    <button class="dashboardButton" onclick="openPayments()">PAYMENTS</button>
+                    <button class="dashboardButton" onclick="openSettings()">SETTINGS</button>
+    
+        </div>
+            </div>
+            <div class="child2">
+                <div class="headerChild2">
+                    <div class="grandchild4">
+                        <div class="grandchild5">
+                            <div class="grand7">
+                                <div class="grand8">
+                                    <form method="POST" action="insert.php">
+                                        <button class="backButton" onclick="back()">BACK</button>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <label for="space_name"> SPACE NAME <span> * </span></label>
+                                        <br/>
+                                        <input class="datafieldText" maxlength="30" type="text" id="space_name" name="space_name" placeholder="Ex: Sky Pod 1"> 
+
+                                        <br/>
+                                        <br/>
+                                        <label for="capacity"> CAPACITY <span> * </span> </label>
+                                        <br/>
+                                        <input class="datafieldText" min="1" max="20" type="number" id="capacity" name="capacity" placeholder="Ex: 1" required>
+
+                                        <br/>
+                                        <br/>
+                                        <label for="price"> PRICE <span> * </span> </label>
+                                        <br/>
+                                        <input class="datafieldText" min="1" type="number" id="price" name="price" placeholder="Ex: 249">
+                                        <br/>
+                                        <br/>
+
+                                        <label>CATEGORY <span> * </span> </label>
+                                        <br/>
+                                        <input type="radio" id="workspace" name="category" value="Workspace" onclick="workspaceDetails()" required>
+                                        <label for="Workspace"> Workspace </label>
+                                        <br/>
+                                        <input type="radio" id="room" name="category" value="Room" onclick="roomDetails()">
+                                        <label for="room"> Room</label>
+
+                                        <div class="grandchild1" id="spaceFormm">
+
+                                        </div>
+                                        <br/>
+                                        <br/>
+                                        <input type="submit" value="SUBMIT" class="submitButton">
+                                    </form>
+                                </div>
+                            <div class="grandchil6">
+
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--<form method="POST" action="insert.php">
+                    <label for="space_name"> Space Name </label>
+                    <br/>
+                    <input type="text" id="space_name" name="space_name" required> 
+
+                    <br/>
+                    <br/>
+                    <label for="capacity"> Capacity</label>
+                    <br/>
+                    <input type="number" id="capacity" name="capacity" required>
+
+                    <br/>
+                    <br/>
+                    <label for="price"> Price</label>
+                    <br/>
+                    <input type="number" id="price" name="price" required>
+                    <br/>
+                    <br/>
+
+                    <input type="radio" id="workspace" name="category" value="Workspace" onclick="workspaceDetails()">
+                    <label for="Workspace"> Workspace </label>
+
+                    <input type="radio" id="room" name="category" value="Room" onclick="roomDetails()">
+                    <label for="room"> Room</label>
+
+                    <div class="grandchild1" id="spaceFormm">
+
+                    </div>
+                    <br/>
+                    <br/>
+                    <input type="submit">
+                </form>
+                -->
+            </div>
+        </div>
+    </body>
+</html>
