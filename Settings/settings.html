@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="settings.css"> 
+        <script src="spaceForm.js"></script>
+<script>
+            
+            function openOverview(){
+                window.open("../Admin/index.php", "_self");
+            } 
+            function openSpace(){
+                window.open("../space/spaceoverview.html", "_self");
+            } 
+
+            function openRates(){
+                window.open("../Rates/readdisplayrecords.php", "_self");
+            } 
+
+            function openReservations(){
+                window.open("../Reservations/reservation.html", "_self");
+            } 
+
+            function openPayments(){
+                window.open("../payments/payments.html", "_self");
+            } 
+
+            function openSettings(){
+                window.open("../settings/settings.html", "_self");
+            } 
+            function openRecent(){
+                window.open("displayrecentreservation.php", "_self")
+            }
+            function openFuture(){
+                window.open("displayfuturereservation.php", "_self")
+            }
+
+            function dlAll(){
+                window.open("downloadrsvpcustopay.php")
+            }
+
+            function dlRes(){
+                window.open("downloadrsvprec.php")
+            }
+            function dlCus(){
+                window.open("downloadcustorec.php")
+            }
+            function dlPay(){
+                window.open("downloadpayrec.php")
+            }
+            function truncPay(){
+                if(confirm("Are you sure you want to delete ALL payment records? This cannot be undone.")) {
+                    window.open("truncatepayment.php", "_self");
+                }
+            }
+            function truncCus(){
+                if(confirm("Are you sure you want to delete ALL customer records? This cannot be undone.")) {
+                    window.open("truncatecustomer.php", "_self");
+                }
+            }
+            function truncRes(){
+                if(confirm("Are you sure you want to delete ALL reservation records? This cannot be undone.")) {
+                    window.open("truncatereservation.php", "_self");
+                }
+            }
+        </script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Cherry+Bomb+One&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="parent">
+            <div class="child1">
+                <div class="grandchild1">
+                    <div class="grandchild2">
+                        <img src="../assets/skydylogo.png" width="100px">
+                    </div>
+                </div>
+                <div class="grandchild3">
+                    <button class="dashboardButton"onclick="openOverview()">OVERVIEW</button>
+                    <button class="dashboardButton"onclick="openSpace()">SPACE</button>
+                    <button class="dashboardButton"onclick="openRates()">RATES</button>
+                    <button class="dashboardButton"onclick="openReservations()">RESERVATION</button>
+                    <button class="dashboardButton"onclick="openPayments()">PAYMENTS</button>
+                    <button class="ChosendashboardButton"onclick="openSettings()">SETTINGS</button>
+                </div>
+            </div>
+            <div class="child2">
+                <div class="headerChild2">
+                    <p class="headerText">.</p>
+                    <div class="grandchild4">
+                        <div class="row1">
+                            <div class="col11">
+                                <div class="sub">
+                                    <p>Download All Details</p>
+                                </div>
+                            </div>
+                            <div class="col12">
+                                <button onclick="dlAll()" class="dlbut">DOWNLOAD</button>
+                            </div>
+                        </div>
+                        <br>
+
+                        <div class="row1">
+                            <div class="col11">
+                                <div class="sub">
+                                    <p>Download Reservation Details</p>
+                                </div>
+                            </div>
+                            <div class="col12">
+                                   <button onclick="dlRes()" class="dlbut">DOWNLOAD</button>
+                            </div>
+                        </div>
+                        <br>
+
+                        <div class="row1">
+                            <div class="col11">
+                                <div class="sub">
+                                    <p>Download Customer Details</p>
+                                </div>
+                            </div>
+                            <div class="col12">
+                                   <button onclick="dlCus()" class="dlbut">DOWNLOAD</button>
+                            </div>
+                        </div>
+                        <br>
+
+                        <div class="row1">
+                            <div class="col11">
+                                <div class="sub">
+                                    <p>Download Payment Details</p>
+                                </div>
+                            </div>
+                            <div class="col12">
+                                   <button onclick="dlPay()" class="dlbut">DOWNLOAD</button>
+                            </div>
+                        </div>
+                        <br>
+                        <hr>
+                        <br>
+
+                        <div class="row1">
+                            <div class="col11">
+                                <div class="sub">
+                                   <p>Delete All Payment Records</p>
+                                </div>
+                            </div>
+                            <div class="col12">
+                                   <button onclick="truncPay()" class="delbut">DELETE</button>
+                            </div>
+                        </div>
+                        <br>
+
+                        <div class="row1">
+                            <div class="col11">
+                                <div class="sub">
+                                   <p>Delete All Customer Records</p>
+                                </div>
+                            </div>
+                            <div class="col12">
+                                   <button onclick="truncCus()" class="delbut">DELETE</button>
+                            </div>
+                        </div>
+                        <br>
+
+                        <div class="row1">
+                            <div class="col11">
+                                <div class="sub">
+                                   <p>Delete All Reservation Records</p>
+                                </div>
+                            </div>
+                            <div class="col12">
+                                   <button onclick="truncRes()" class="delbut">DELETE</button>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="grandchild5">
+                            <div class="grandchil6">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

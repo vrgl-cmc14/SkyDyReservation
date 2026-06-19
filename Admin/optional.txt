@@ -1,0 +1,46 @@
+<div class="row5">
+                                        <div class="r5c1">
+                                            <p class="rowText">TOTAL PAYMENTS RECEIVED: </p>
+                                        </div>
+                                        <div class="r5c2">
+                                            <?php
+                                                require 'db_connect.php';
+
+                                                $sql = "SELECT SUM(p.amount_paid) AS total_payments
+                                                        FROM payment p
+                                                        JOIN reservation r ON p.reservation_id = r.reservation_id
+                                                        WHERE r.reservation_status = 'Confirmed'";
+
+                                                $result = $conn->query($sql);
+                                                $row = $result->fetch_assoc();
+
+                                                $message = "<p style='text-align: center; font-size: 30px; font-weight: bold'> Php " . number_format($row["total_payments"],2) . "</p>";
+
+                                                echo $message;
+                                            ?>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row6">
+                                        <div class="r6c1">
+                                            <p class="rowText">TODAY'S INCOME: </p>
+                                        </div>
+                                        <div class="r6c2">
+                                            <?php
+                                                require 'db_connect.php';
+
+                                                $sql = "SELECT SUM(p.amount_paid) AS todays_payments
+                                                        FROM payment p
+                                                        JOIN reservation r ON p.reservation_id = r.reservation_id
+                                                        WHERE r.reservation_status = 'Confirmed'
+                                                        AND DATE(p.payment_date_time) = CURDATE()";
+
+                                                $result = $conn->query($sql);
+                                                $row = $result->fetch_assoc();
+                                                
+                                                $message = "<p style='text-align: center; font-size: 30px; font-weight: bold'> Php " . number_format($row["todays_payments"],2) . "</p>";
+
+                                                echo $message;
+                                            ?>
+                                        </div>
+                                    </div>

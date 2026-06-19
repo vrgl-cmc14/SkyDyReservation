@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="payment.css"> 
+
+        <script>
+            window.onload = function() {
+                /*fetch("displaytodayreservation.php")
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector(".grandchild4").innerHTML += data;
+                }); */
+                
+                fetch("viewtodaypayments.php")
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector(".grandchild4").innerHTML += data;
+                });
+            }
+            
+            function openOverview(){
+                window.open("../Admin/index.php", "_self");
+            } 
+            function openSpace(){
+                window.open("../space/spaceoverview.html", "_self");
+            } 
+
+            function openRates(){
+                window.open("../Rates/readdisplayrecords.php", "_self");
+            } 
+
+            function openReservations(){
+                window.open("../Reservations/reservation.html", "_self");
+            } 
+
+            function openPayments(){
+                window.open("../payments/payments.html", "_self");
+            } 
+
+            function openSettings(){
+                window.open("../settings/settings.html", "_self");
+            } 
+            function openRecent(){
+                window.open("viewrecentpayments.php", "_self");
+            }
+            function openToday(){
+                window.open("payments.html", "_self");
+            }
+        </script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Cherry+Bomb+One&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="parent">
+            <div class="child1">
+                <div class="grandchild1">
+                    <div class="grandchild2">
+                        <img src="../assets/skydylogo.png" width="100px">
+                    </div>
+                </div>
+                <div class="grandchild3">
+                    <button class="dashboardButton" onclick="openOverview()">OVERVIEW</button>
+                    <button class="dashboardButton" onclick="openSpace()">SPACE</button>
+                    <button class="dashboardButton" onclick="openRates()">RATES</button>
+                    <button class="dashboardButton" onclick="openReservations()">RESERVATION</button>
+                    <button class="ChosendashboardButton" onclick="openPayments()">PAYMENTS</button>
+                    <button class="dashboardButton" onclick="openSettings()">SETTINGS</button>
+                </div>
+            </div>
+            <div class="child2">
+                <div class="headerChild2">
+                    <p class="headerText">.</p>
+                    <div class="grandchild4">
+                        <br>
+                        <div class="mgaButton">
+                            <button class="chosenone" >TODAY</button>
+                            <button class="add" onclick="openRecent()"> RECENT</button>
+                        </div>
+                        <br>
+                        <hr>
+
+                        <div class="searchFlex">
+                            <div class="search1">
+                                <form action="paysearchbydate.php" method="get">
+                                    <input class="datafieldText" type="date" name="date" required>
+                                    <input class="search" type="submit" value="Search by Date" id="sbydate" name="sbydate"> 
+                                </form>
+                            </div>
+                            <div class="search2">
+                                <form action="paysearchbyid.php" method="get">
+                                    <input class="datafieldText" type="number" placeholder="Enter a number" name="payId" required min="0"> 
+                                    <input class="search" type="submit" value="Search by ID">
+                                </form>
+                            </div>
+                        </div>
+                        <br>
+                        <hr>
+                        <div class="grandchild5">
+                            <div class="grandchil6">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

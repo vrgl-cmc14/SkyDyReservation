@@ -1,0 +1,175 @@
+*{
+    font-family: "Chelsea Market", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 2px;
+}
+
+body{
+    margin: 0 auto;
+}
+
+.parent{
+    display: flex;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.child1{
+    flex: 1.5;
+    background-color: #325288;
+    min-height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    width: 13.5%;
+}
+
+.child2{
+    flex: 8.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background: url(../assets/skydybg.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding: 80px;
+    overflow-y: auto;
+    margin-left: 13.5%;
+}
+
+.dashboardButton{
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    background: none;
+    color: whitesmoke;
+    border: none;
+}
+
+.ChosendashboardButton{
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    background-color: #F3EA6D;
+    color: black;
+    border: none;
+}
+
+.dashboardButton:hover{
+    background-color: #F3EA6D;
+    color: black;
+}
+
+.grandchild1{
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.headerChild2{
+    background-color: #3B71CA;
+    text-align: center;
+    color: whitesmoke;
+    border-radius: 40px;
+    width: 100%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 5%;
+}
+
+.grandchild4{
+    background-color: #FFF8C4;
+    color: black;
+    padding: 20px;          
+    box-sizing: border-box; 
+    text-align: left;    
+}
+
+.grandchild5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.recordsContainer {
+    width: 100%;
+}
+
+.recordCard {
+    display: flex;
+    width: 100%;
+}
+.editRecord{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 30%;
+    font-size: 10px;
+    border-radius: 4px;
+    background-color: #3B71CA;
+    color: white;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.deleteRecord{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 30%;
+    font-size: 10px;
+    border-radius: 4px;
+    background-color: whitesmoke;
+    color: black;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.editRecord:hover, .deleteRecord:hover{
+    background-color: #F3EA6D;
+    color: black;
+}
+.headerText{
+    color: #3B71CA
+}
+.lagayan{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding-right: 4%;
+}
+.addRecord{
+    background-color: #3B71CA;
+    color: whitesmoke;
+    font-size: 12px;
+    margin: 10px;
+    padding: 7px;
+    border: solid 2px black;
+    border-radius: 15%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.clearRecord{
+    background-color: whitesmoke;
+    color: black;
+    font-size: 12px;
+    margin: 10px;
+    padding: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: solid 2px black;
+    border-radius: 15%;
+}
+.addRecord:hover{
+    background-color: #F3EA6D;
+    color: black;
+}
+
+.clearRecord:hover{
+    background-color: #F3EA6D;
+    color: black;
+}

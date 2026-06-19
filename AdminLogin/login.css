@@ -1,0 +1,70 @@
+*{
+    font-family: "Chelsea Market", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 2px;
+}
+body{
+    margin: auto;
+    background-image: url("../assets/skydybg.png");
+    background-repeat: no-repeat; 
+    background-size: cover;     
+    background-position: center; 
+    background-attachment: fixed; 
+
+}
+
+.parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.child{
+    background-color: #3B71CA;
+    margin: 20%;
+    padding: 5%;
+    border-radius: 30px;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+}
+
+label{
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: whitesmoke;
+}
+
+input{
+    width: 60vh;
+    margin-top: 30px;
+    height: 40px;
+    border: none;
+    letter-spacing: 2px;
+    border-radius: 10px
+}
+
+.submit{
+    background-color: #f1ede5;
+    border: none;
+    color: #273c5e;
+    letter-spacing: 2px;
+    font-weight: bold;
+    border-radius: 20px;
+   /* border-style: solid;
+    border-color: #010101;
+    border-width: 2px;*/
+
+}
+.submit:hover{
+    background-color: #F3EA6D;
+    border-radius: 20px;
+    border-width: 0;
+    border: none;
+    color: black;
+    
+    
+}
+
